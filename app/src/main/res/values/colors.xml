@@ -1,0 +1,18 @@
+<resources>
+    <color name="paper">#FBF9F6</color>
+    <color name="ink">#1B1C1A</color>
+    <color name="accent">#A93200</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="divider">#DAD1C8</color>
+    <color name="outline">#D0C6BC</color>
+    <color name="outline_input">#BEB3A8</color>
+    <color name="muted">#6A615C</color>
+    <color name="soft_orange">#FFDBD0</color>
+    <color name="soft_amber">#FFF0D1</color>
+    <color name="amber">#805400</color>
+    <color name="amber_outline">#D5A53A</color>
+    <color name="soft_green">#E7EEE8</color>
+    <color name="green">#28704A</color>
+    <color name="soft_sand">#F5F3F0</color>
+    <color name="on_primary_fixed">#390B00</color>
+</resources>

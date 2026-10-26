@@ -1,0 +1,346 @@
+<!DOCTYPE html><html class="light" lang="vi" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>VocaBloom - Hồ sơ cá nhân</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Literata & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..700;1,7..72,400..700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed": "#390b00",
+            "on-surface-variant": "#5a4139",
+            "primary-fixed": "#ffdbd0",
+            "surface": "#fbf9f6",
+            "primary": "#a93200",
+            "primary-container": "#ce4613",
+            "error-container": "#ffdad6",
+            "on-background": "#1b1c1a",
+            "surface-tint": "#ad3300",
+            "on-primary-container": "#fffbff",
+            "surface-container": "#efeeeb",
+            "inverse-on-surface": "#f2f0ed",
+            "surface-dim": "#dbdad7",
+            "on-primary-fixed-variant": "#842500",
+            "tertiary": "#a83200",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#fbf9f6",
+            "tertiary-container": "#cc4918",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f5f3f0",
+            "on-secondary-container": "#606361",
+            "background": "#fbf9f6",
+            "secondary-fixed": "#e0e3e0",
+            "outline": "#8d7168",
+            "on-tertiary-fixed": "#390b00",
+            "secondary-container": "#dde0dd",
+            "inverse-surface": "#30312f",
+            "surface-variant": "#e4e2df",
+            "tertiary-fixed-dim": "#ffb59d",
+            "outline-variant": "#e2bfb5",
+            "inverse-primary": "#ffb59e",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#444845",
+            "on-secondary-fixed": "#181c1b",
+            "error": "#ba1a1a",
+            "on-tertiary-container": "#fffbff",
+            "on-tertiary-fixed-variant": "#842500",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#ffdbd0",
+            "surface-container-highest": "#e4e2df",
+            "secondary": "#5b5f5d",
+            "secondary-fixed-dim": "#c4c7c4",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "on-surface": "#1b1c1a",
+            "surface-container-high": "#eae8e5",
+            "primary-fixed-dim": "#ffb59e"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-xl": "2rem",
+            "margin": "1rem",
+            "space-xs": "0.25rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "headline-md": ["Literata"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "display-lg": ["Literata"],
+            "headline-sm": ["Literata"],
+            "headline-lg": ["Literata"],
+            "label-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Pixel 4a Device Frame Simulation */
+    body {
+      background-color: #efeeeb;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .pixel-viewport {
+      width: 100%;
+      max-width: 412px;
+      min-height: 100vh;
+      background-color: #fbf9f6;
+      box-shadow: 0 10px 25px -5px rgba(30, 35, 32, 0.08);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body class="bg-surface-container text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Pixel 4a Canvas -->
+<main class="pixel-viewport">
+<!-- Android Status Bar Mock (API 34 Ergonomics) -->
+<div class="h-6 w-full px-6 pt-2 flex justify-between items-center text-xs font-label-md text-secondary select-none">
+<span class="font-semibold tracking-tight">20:30</span>
+<div class="flex items-center space-x-1.5 opacity-80">
+<span class="material-symbols-outlined text-sm leading-none" data-icon="signal_cellular_alt">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-sm leading-none" data-icon="wifi">wifi</span>
+<span class="material-symbols-outlined text-sm leading-none" data-icon="battery_full">battery_full</span>
+</div>
+</div>
+<!-- Top App Bar (Shared Anchor Blueprint) -->
+<header class="flex justify-between items-center w-full px-space-md h-14 bg-surface text-primary select-none z-10">
+<div class="flex items-center space-x-3">
+<button aria-label="Quay lại" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-high active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-headline-sm font-headline-sm text-on-surface font-semibold tracking-tight">Hồ sơ người học</h1>
+</div>
+<button aria-label="Cài đặt" class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-high active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</header>
+<!-- Scrollable Content Canvas -->
+<div class="flex-1 overflow-y-auto px-space-md pb-24 space-y-space-md">
+<!-- 2. Thẻ Thông Tin Cá Nhân (Profile Card) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md border border-surface-variant shadow-sm flex items-center space-x-space-md relative overflow-hidden mt-1">
+<!-- Ambient decorative tint in corner -->
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary-fixed opacity-40 blur-lg pointer-events-none"></div>
+<!-- Avatar Container -->
+<div class="relative shrink-0">
+<img class="w-16 h-16 rounded-full object-cover border-2 border-primary-container shadow-inner" data-alt="A warm, scholarly portrait of a young Vietnamese student named Minh Anh smiling gently in a bright library setting, soft daylight illuminating her face with warm neutral tones and subtle terracotta accents in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqZuP8C_hVUyoY8qkrK9fFNPBPEXLclpXCc42u4k2Px55p112he2elDtQb08htotlOi4OaBhvoRa1JolPLz4PNkrcFr2UUJrh8x9JPb0h69jv1Iz5NIobbpw5UWD_l4A85vAlkFDophRKdYBee9sUaXTAXoTq9GJGM79IFBZQbffUop6HtBN0Zl033yNN-QDrSmegHMmCnLFaO2nhs-37QMvELOnYdJsaztxCEdw4">
+<button aria-label="Đổi ảnh đại diện" class="absolute bottom-0 right-0 bg-primary text-on-primary rounded-full p-1 shadow-sm active:scale-90 transition-transform duration-150 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs leading-none" data-icon="edit">edit</span>
+</button>
+</div>
+<!-- Identity Details -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center space-x-1.5">
+<h2 class="text-headline-sm font-headline-sm text-on-surface truncate">Minh Anh Nguyễn</h2>
+<span class="material-symbols-outlined text-primary text-sm shrink-0" data-icon="verified" data-weight="fill" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="text-body-sm font-body-sm text-secondary truncate mt-0.5">minhanh.edu@gmail.com</p>
+<!-- Badge Thành viên Chuyên cần -->
+<div class="mt-2.5 inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed border border-outline-variant">
+<span class="material-symbols-outlined text-xs mr-1 text-primary" data-icon="local_fire_department" data-weight="fill" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="text-label-sm font-label-sm font-bold tracking-wide">Học viên Chuyên cần</span>
+</div>
+</div>
+</section>
+<!-- 4. Tổng Quan Thành Tích (Bento-style Metric Overview) -->
+
+<!-- 3. Bảng Mục Tiêu Học Tập Trực Tiếp (Editable Learning Goals) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md border border-surface-variant shadow-sm space-y-space-md">
+<div class="flex items-center justify-between border-b border-surface-variant pb-2">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="flag">flag</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Mục tiêu học tập</h3>
+</div>
+<span class="text-label-sm font-label-sm text-secondary bg-surface-container-high px-2 py-0.5 rounded-full">Tùy biến</span>
+</div>
+<div class="space-y-3">
+<!-- Row 1: Daily Target (Editable Direct Action) -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low border border-surface-variant">
+<div class="space-y-0.5">
+<span class="text-label-md font-label-md text-secondary">Mục tiêu mỗi ngày</span>
+<p class="text-body-lg font-body-lg text-on-surface font-semibold" id="target-count-text">20 từ / ngày</p>
+</div>
+<button class="px-3 py-1.5 text-label-md font-label-md rounded-lg text-primary bg-surface-container-lowest border border-outline-variant hover:bg-primary-fixed active:scale-95 transition-transform duration-150 flex items-center space-x-1" id="edit-goal-btn">
+<span class="material-symbols-outlined text-xs" data-icon="tune">tune</span>
+<span class="">Chỉnh sửa</span>
+</button>
+</div>
+<!-- Row 2: Proficiency Level (Dropdown Selector) -->
+
+<!-- Row 3: Study Reminder (Interactive Toggle Switch) -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low border border-surface-variant">
+<div class="space-y-0.5">
+<span class="text-label-md font-label-md text-secondary">Khung giờ nhắc nhở học</span>
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-xs text-primary" data-icon="schedule">schedule</span>
+<p class="text-body-lg font-body-lg text-on-surface font-semibold" id="reminder-time">20:30 mỗi tối</p>
+</div>
+</div>
+<!-- Modern Android Material 3 Toggle -->
+<label class="relative inline-flex items-center cursor-pointer select-none">
+<input checked="" class="sr-only peer" id="notification-toggle" type="checkbox">
+<div class="w-12 h-7 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-surface-variant after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- 5. Danh Sách Tùy Chọn Cài Đặt Tài Khoản (Tactile List Group) -->
+<section class="space-y-1.5">
+<h3 class="text-label-md font-label-md text-on-surface-variant font-bold uppercase tracking-wider px-1">Cài đặt tài khoản</h3>
+<div class="bg-surface-container-lowest rounded-xl border border-surface-variant divide-y divide-surface-variant shadow-sm overflow-hidden">
+<!-- Option 1: Bộ từ vựng của tôi -->
+<button class="w-full flex items-center justify-between p-3.5 hover:bg-surface-container-low active:bg-surface-container-high transition-colors text-left group">
+<div class="flex items-center space-x-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="collections_bookmark">collections_bookmark</span>
+</div>
+<div>
+<span class="text-body-lg font-body-lg text-on-surface font-medium block">Bộ từ vựng của tôi</span>
+<span class="text-label-sm font-label-sm text-secondary">3 thư mục • 2 bộ tự tạo</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-sm group-hover:translate-x-0.5 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+<!-- Option 2: Nhắc nhở học tập & Thông báo -->
+<button class="w-full flex items-center justify-between p-3.5 hover:bg-surface-container-low active:bg-surface-container-high transition-colors text-left group">
+<div class="flex items-center space-x-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="notifications">notifications</span>
+</div>
+<div>
+<span class="text-body-lg font-body-lg text-on-surface font-medium block">Nhắc nhở học tập &amp; Thông báo</span>
+<span class="text-label-sm font-label-sm text-secondary">Bật chuông, rung phản hồi</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-sm group-hover:translate-x-0.5 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+<!-- Option 3: Đồng bộ hóa & Ngoại tuyến -->
+
+<!-- Option 4: Hỗ trợ & Đóng góp ý kiến -->
+
+</div>
+</section>
+<!-- 6. Nút Đăng Xuất Màu Xám Than Chì Tinh Tế (Charcoal Secondary Action) -->
+<section class="pt-2 pb-4">
+<button class="w-full h-12 rounded-xl bg-surface-container-low border border-surface-variant hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg active:scale-[0.99] transition-transform duration-150 flex items-center justify-center space-x-2">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="logout">logout</span>
+<span class="">Đăng xuất tài khoản</span>
+</button>
+<p class="text-center text-body-sm font-body-sm text-secondary opacity-60 mt-3">VocaBloom v2.4.1 (Build 342) • Bản quyền tiếng Việt</p>
+</section>
+</div>
+<!-- 7. Bottom Navigation Bar (Shared Anchor Blueprint) -->
+<!-- Destination count: 5. Labels: ["Trang chủ", "Học từ", "Luyện tập", "Tiến độ", "Hồ sơ"]. Tab 'Hồ sơ' is active. -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-space-md h-14 pb-safe bg-surface-container-low text-primary shadow-sm border-t border-surface-variant max-w-[412px] mx-auto right-0">
+<!-- Tab 1: Trang chủ -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-1 hover:bg-surface-container-high active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="home">home</span>
+<span class="text-label-sm font-label-sm mt-0.5">Trang chủ</span>
+</a>
+<!-- Tab 2: Học từ -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-1 hover:bg-surface-container-high active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="menu_book">menu_book</span>
+<span class="text-label-sm font-label-sm mt-0.5">Học từ</span>
+</a>
+<!-- Tab 3: Luyện tập -->
+
+<!-- Tab 4: Tiến độ -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-1 hover:bg-surface-container-high active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="bar_chart">bar_chart</span>
+<span class="text-label-sm font-label-sm mt-0.5">Tiến độ</span>
+</a>
+<!-- Tab 5: Hồ sơ (ACTIVE) -->
+<a class="flex flex-col items-center justify-center bg-primary-fixed text-on-primary-fixed rounded-full px-3 py-1 hover:bg-surface-container-high active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="person" data-weight="fill" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-label-sm font-label-sm mt-0.5 font-bold">Hồ sơ</span>
+</a>
+</nav>
+<!-- Bottom Gesture Navigation Line for Android 14 / Pixel 4a Simulation -->
+<div class="h-4 w-full flex justify-center items-center pointer-events-none fixed bottom-0 left-0 right-0 max-w-[412px] mx-auto z-50">
+<div class="w-28 h-1 bg-on-surface opacity-25 rounded-full"></div>
+</div>
+</main>
+<!-- Interactive JavaScript for micro-actions -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const editBtn = document.getElementById('edit-goal-btn');
+      const targetText = document.getElementById('target-count-text');
+      const toggleSwitch = document.getElementById('notification-toggle');
+      const reminderTime = document.getElementById('reminder-time');
+
+      // Edit Goal quick micro-toggle
+      const targets = ['15 từ / ngày', '20 từ / ngày', '25 từ / ngày', '30 từ / ngày'];
+      let targetIdx = 1;
+      
+      if(editBtn && targetText) {
+        editBtn.addEventListener('click', () => {
+          targetIdx = (targetIdx + 1) % targets.length;
+          targetText.innerText = targets[targetIdx];
+          targetText.classList.add('text-primary');
+          setTimeout(() => {
+            targetText.classList.remove('text-primary');
+          }, 400);
+        });
+      }
+
+      // Notification toggle opacity reaction
+      if(toggleSwitch && reminderTime) {
+        toggleSwitch.addEventListener('change', (e) => {
+          if(!e.target.checked) {
+            reminderTime.classList.add('opacity-40', 'line-through');
+          } else {
+            reminderTime.classList.remove('opacity-40', 'line-through');
+          }
+        });
+      }
+    });
+  </script>
+
+
+</body></html>

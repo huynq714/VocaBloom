@@ -1,0 +1,8 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/paper" android:gravity="center" android:padding="26dp" android:orientation="vertical">
+ <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="✦" android:textColor="@color/accent" android:textSize="65sp"/>
+ <TextView style="@style/TitleLarge" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:gravity="center" android:text="Giỏi lắm!"/>
+ <TextView android:id="@+id/doneCount" style="@style/BodyMuted" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:layout_marginTop="12dp" android:text="0 thẻ từ đã hoàn thành"/>
+ <TextView style="@style/BodyMuted" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:gravity="center" android:text="Mỗi ngày một chút, bạn sẽ nhớ lâu hơn."/>
+ <Button android:id="@+id/goStats" style="@style/PrimaryButton" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="35dp" android:text="Xem tiến độ →"/>
+ <Button android:id="@+id/goHome" style="@style/SecondaryButton" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="10dp" android:text="Về trang chủ"/>
+</LinearLayout>

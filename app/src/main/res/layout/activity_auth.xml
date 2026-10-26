@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:background="@color/paper">
+ <LinearLayout android:orientation="vertical" android:paddingStart="24dp" android:paddingEnd="24dp" android:paddingTop="16dp" android:paddingBottom="24dp" android:layout_width="match_parent" android:layout_height="match_parent">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:gravity="center_vertical" android:orientation="horizontal">
+   <View android:layout_width="48dp" android:layout_height="48dp" />
+   <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="♨  VocaBloom" android:textColor="@color/accent" android:textStyle="bold" android:fontFamily="@font/literata_semibold" android:textSize="23sp" />
+   <TextView android:layout_width="48dp" android:layout_height="48dp" android:gravity="center" android:text="ⓘ" android:textColor="@color/muted" android:textSize="22sp" />
+  </LinearLayout>
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:gravity="center" android:orientation="vertical">
+   <TextView android:layout_width="58dp" android:layout_height="58dp" android:gravity="center" android:background="@drawable/stitch_pill" android:text="❀" android:textColor="@color/accent" android:textSize="34sp" />
+   <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:gravity="center" android:text="Chào mừng trở lại" android:fontFamily="@font/literata_semibold" android:textStyle="bold" android:textSize="28sp" android:textColor="@color/ink" />
+   <TextView android:id="@+id/authSubtitle" style="@style/BodyMuted" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="center" android:text="Tiếp tục hành trình làm chủ vốn từ của bạn" />
+  </LinearLayout>
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:padding="18dp" android:orientation="vertical" android:background="@drawable/stitch_card" android:elevation="1dp">
+   <TextView android:id="@+id/authHeading" style="@style/SectionTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:visibility="gone" android:text="Đăng nhập" />
+   <com.google.android.material.textfield.TextInputLayout android:id="@+id/nameLayout" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="Tên hiển thị" android:visibility="gone">
+    <com.google.android.material.textfield.TextInputEditText android:id="@+id/nameInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPersonName" android:singleLine="true" />
+   </com.google.android.material.textfield.TextInputLayout>
+
+   <com.google.android.material.textfield.TextInputLayout android:id="@+id/emailLayout" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="Email hoặc tên đăng nhập" app:boxCornerRadiusTopStart="12dp" app:boxCornerRadiusTopEnd="12dp" app:boxCornerRadiusBottomStart="12dp" app:boxCornerRadiusBottomEnd="12dp">
+    <com.google.android.material.textfield.TextInputEditText android:id="@+id/emailInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress" android:singleLine="true" />
+   </com.google.android.material.textfield.TextInputLayout>
+   <com.google.android.material.textfield.TextInputLayout android:id="@+id/passwordLayout" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:hint="Mật khẩu" app:passwordToggleEnabled="true" app:boxCornerRadiusTopStart="12dp" app:boxCornerRadiusTopEnd="12dp" app:boxCornerRadiusBottomStart="12dp" app:boxCornerRadiusBottomEnd="12dp">
+    <com.google.android.material.textfield.TextInputEditText android:id="@+id/passwordInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" android:singleLine="true" />
+   </com.google.android.material.textfield.TextInputLayout>
+   <com.google.android.material.textfield.TextInputLayout android:id="@+id/confirmPasswordLayout" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:hint="Xác nhận mật khẩu" android:visibility="gone" app:passwordToggleEnabled="true" app:boxCornerRadiusTopStart="12dp" app:boxCornerRadiusTopEnd="12dp" app:boxCornerRadiusBottomStart="12dp" app:boxCornerRadiusBottomEnd="12dp">
+    <com.google.android.material.textfield.TextInputEditText android:id="@+id/confirmPasswordInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" android:singleLine="true" />
+   </com.google.android.material.textfield.TextInputLayout>
+   <TextView android:id="@+id/forgotPassword" android:layout_width="match_parent" android:layout_height="48dp" android:gravity="end|center_vertical" android:text="Quên mật khẩu?" android:textColor="@color/accent" android:textSize="13sp" android:textStyle="bold" android:clickable="true" android:focusable="true" />
+   <com.google.android.material.button.MaterialButton android:id="@+id/authSubmit" style="@style/PrimaryButton" android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="8dp" android:text="Đăng nhập     →" />
+   <ProgressBar android:id="@+id/authLoading" android:layout_width="36dp" android:layout_height="36dp" android:layout_gravity="center" android:layout_marginTop="10dp" android:visibility="gone" />
+   <TextView android:id="@+id/authError" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:textColor="#B3261E" android:textSize="13sp" android:visibility="gone" />
+   <com.google.android.material.button.MaterialButton android:id="@+id/toggleAuth" style="@style/SecondaryButton" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="10dp" android:text="Chưa có tài khoản? Đăng ký" />
+  </LinearLayout>
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:padding="14dp" android:gravity="center_vertical" android:background="@drawable/stitch_soft">
+   <TextView android:layout_width="32dp" android:layout_height="wrap_content" android:text="▤" android:textColor="@color/accent" android:textSize="22sp" />
+   <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="“Mỗi từ mới hôm nay là một bước tiến ngày mai.”" android:textColor="@color/muted" android:textSize="13sp" android:fontFamily="@font/literata_semibold" android:textStyle="italic" />
+  </LinearLayout>
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:gravity="center" android:text="Mỗi ngày một chút, bạn sẽ nhớ lâu hơn." android:textColor="@color/muted" android:textSize="11sp" />
+ </LinearLayout>
+</ScrollView>

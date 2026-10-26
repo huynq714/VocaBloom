@@ -1,0 +1,9 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="60dp" android:orientation="horizontal"
+    android:gravity="center" android:paddingStart="12dp" android:paddingEnd="12dp"
+    android:background="@color/surface" android:elevation="6dp">
+    <TextView android:id="@+id/navHome" style="@style/BodyMuted" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:gravity="center" android:clickable="true" android:focusable="true" android:text="Trang chủ" android:textSize="11sp" />
+    <TextView android:id="@+id/navTopics" style="@style/BodyMuted" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:gravity="center" android:clickable="true" android:focusable="true" android:text="Học từ" android:textSize="11sp" />
+    <TextView android:id="@+id/navStats" style="@style/BodyMuted" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:gravity="center" android:clickable="true" android:focusable="true" android:text="Tiến độ" android:textSize="11sp" />
+    <TextView android:id="@+id/navProfile" style="@style/BodyMuted" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:gravity="center" android:clickable="true" android:focusable="true" android:text="Hồ sơ" android:textSize="11sp" />
+</LinearLayout>

@@ -1,0 +1,341 @@
+<!DOCTYPE html><html class="light" lang="vi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>VocaBloom - Tiến độ học tập</title>
+<!-- Google Fonts: Literata & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-container": "#dde0dd",
+            "surface-tint": "#ad3300",
+            "tertiary-container": "#cc4918",
+            "surface-container-high": "#eae8e5",
+            "primary-fixed-dim": "#ffb59e",
+            "error-container": "#ffdad6",
+            "primary": "#a93200",
+            "error": "#ba1a1a",
+            "on-primary": "#ffffff",
+            "background": "#fbf9f6",
+            "on-background": "#1b1c1a",
+            "on-primary-container": "#fffbff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed": "#390b00",
+            "inverse-primary": "#ffb59e",
+            "on-primary-fixed-variant": "#842500",
+            "primary-fixed": "#ffdbd0",
+            "surface-container-low": "#f5f3f0",
+            "on-surface-variant": "#5a4139",
+            "tertiary-fixed": "#ffdbd0",
+            "on-secondary-fixed": "#181c1b",
+            "on-error-container": "#93000a",
+            "surface-bright": "#fbf9f6",
+            "on-tertiary-container": "#fffbff",
+            "inverse-on-surface": "#f2f0ed",
+            "on-secondary-container": "#606361",
+            "surface-dim": "#dbdad7",
+            "inverse-surface": "#30312f",
+            "secondary-fixed-dim": "#c4c7c4",
+            "surface-variant": "#e4e2df",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed": "#390b00",
+            "outline-variant": "#e2bfb5",
+            "secondary": "#5b5f5d",
+            "on-tertiary": "#ffffff",
+            "primary-container": "#ce4613",
+            "tertiary-fixed-dim": "#ffb59d",
+            "secondary-fixed": "#e0e3e0",
+            "on-secondary-fixed-variant": "#444845",
+            "outline": "#8d7168",
+            "surface": "#fbf9f6",
+            "on-tertiary-fixed-variant": "#842500",
+            "tertiary": "#a83200",
+            "surface-container-highest": "#e4e2df",
+            "surface-container": "#efeeeb",
+            "on-error": "#ffffff",
+            "on-surface": "#1b1c1a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "margin": "1rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Literata"],
+            "headline-md": ["Literata"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "display-lg": ["Literata"],
+            "headline-lg": ["Literata"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Pixel 4a mobile frame simulation styling */
+    body {
+      background-color: #f0ece6;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .pixel-viewport {
+      width: 100%;
+      max-width: 412px;
+      min-height: 100vh;
+      background-color: #fbf9f6;
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    @media (min-width: 640px) {
+      .pixel-viewport {
+        min-height: 870px;
+        margin: 24px auto;
+        border-radius: 36px;
+        box-shadow: 0 20px 45px rgba(30, 35, 32, 0.14), 0 2px 8px rgba(30, 35, 32, 0.06);
+        border: 8px solid #202321;
+      }
+    }
+  </style>
+</head>
+<body class="bg-surface-container-high text-on-surface">
+<!-- Main Mobile Canvas (Pixel 4a Dimensions) -->
+<div class="pixel-viewport bg-surface">
+<!-- Android Status Bar Simulation -->
+<div class="w-full h-8 pt-1 px-space-md flex justify-between items-center text-on-surface-variant z-40 bg-surface">
+<span class="font-label-md text-label-md font-semibold">09:41</span>
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span class="material-symbols-outlined text-[18px]">battery_full</span>
+</div>
+</div>
+<!-- Top App Bar (TopAppBar anchor translated) -->
+<header class="flex justify-between items-center w-full px-space-md h-14 bg-surface sticky top-0 z-30 transition-transform duration-150">
+<div class="flex items-center space-x-2">
+<button aria-label="Quay lại" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container-high active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div>
+<h1 class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">Tiến độ học tập</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant font-medium">Bản cập nhật hôm nay</p>
+</div>
+</div>
+<!-- Right streak indicator badge -->
+<div class="flex items-center gap-1 bg-primary-fixed/60 px-2.5 py-1 rounded-full border border-primary-fixed">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-label-md text-label-md text-on-primary-fixed font-bold">3 ngày</span>
+</div>
+</header>
+<!-- Scrollable Content Canvas -->
+<main class="flex-1 px-space-md pb-28 pt-2 space-y-space-md overflow-y-auto">
+<!-- Bento 1: Thẻ Tổng Quan Tiến Độ Học Tập Demo -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md border border-surface-variant/80 shadow-sm relative overflow-hidden">
+<!-- Subtle watermarked background graphic accent -->
+<div class="absolute -right-6 -bottom-6 opacity-5 pointer-events-none text-primary">
+<span class="material-symbols-outlined text-[130px]">local_florist</span>
+</div>
+<div class="flex items-center justify-between pb-3 border-b border-surface-variant/60">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Gói từ vựng cơ bản</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">35 <span class="font-body-md text-body-md text-on-surface-variant font-normal">/ 150 từ</span></h2>
+</div>
+<!-- Circular Progress Indicator -->
+<div class="relative w-14 h-14 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="23.3, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-md text-label-md font-bold text-primary">23%</span>
+</div>
+</div>
+<!-- 3 Quick Metric Pills -->
+<div class="grid grid-cols-3 gap-2 pt-3">
+<div class="bg-surface-container-low rounded-lg p-2 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-[18px] mb-0.5">menu_book</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Đã học</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">35 từ</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-[18px] mb-0.5" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Chuỗi ngày</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">3 ngày</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-outline text-[18px] mb-0.5">schedule</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Thời gian</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">15 phút</span>
+</div>
+</div>
+</section>
+<!-- Bento 2: Trọng tâm chính - Cấp độ ghi nhớ (Memory Mastery) -->
+
+<!-- Bento 3: Tiến độ theo từng chủ đề demo (Chỉ 3 chủ đề) -->
+<section class="space-y-space-sm pt-1">
+<div class="flex items-center justify-between px-0.5">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Chủ đề demo đang học</h2>
+<span class="font-label-sm text-label-sm text-outline">3 / 3 chủ đề</span>
+</div>
+<div class="space-y-2.5">
+<!-- Chủ đề 1: Daily Life -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-3.5 space-y-2 shadow-sm">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-primary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">wb_sunny</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-bold text-on-surface">Daily Life</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Đời sống hằng ngày &amp; giao tiếp</p>
+</div>
+</div>
+<span class="font-label-md text-label-md font-bold text-primary">36%</span>
+</div>
+<!-- Progress Bar -->
+<div class="space-y-1">
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-2 rounded-full transition-all duration-500" style="width: 36%"></div>
+</div>
+<div class="flex justify-between items-center text-[11px] font-label-sm text-outline">
+<span class="">18 từ đã học</span>
+<span class="">Mục tiêu: 50 từ</span>
+</div>
+</div>
+</div>
+<!-- Chủ đề 2: University Life -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-3.5 space-y-2 shadow-sm">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-bold text-on-surface">University Life</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Môi trường giảng đường đại học</p>
+</div>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">24%</span>
+</div>
+<!-- Progress Bar -->
+<div class="space-y-1">
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary/80 h-2 rounded-full transition-all duration-500" style="width: 24%"></div>
+</div>
+<div class="flex justify-between items-center text-[11px] font-label-sm text-outline">
+<span class="">12 từ đã học</span>
+<span class="">Mục tiêu: 50 từ</span>
+</div>
+</div>
+</div>
+<!-- Chủ đề 3: Food and Drink Life -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-3.5 space-y-2 shadow-sm">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">restaurant</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-bold text-on-surface">Food and Drink Life</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ẩm thực, nguyên liệu và đồ uống</p>
+</div>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">10%</span>
+</div>
+<!-- Progress Bar -->
+<div class="space-y-1">
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary/60 h-2 rounded-full transition-all duration-500" style="width: 10%"></div>
+</div>
+<div class="flex justify-between items-center text-[11px] font-label-sm text-outline">
+<span class="">5 từ đã học</span>
+<span class="">Mục tiêu: 50 từ</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action (CTA) Module -->
+
+</main>
+<!-- Bottom Navigation Bar (4 Tab Clean Demo Architecture: Trang chủ, Học từ, Tiến độ [Active], Hồ sơ) -->
+<!-- Prohibits border lines, uses elevation shadow-sm, docked full-width bottom-0 -->
+<nav aria-label="Thanh điều hướng chính" class="fixed sm:absolute bottom-0 left-0 w-full z-50 flex justify-around items-center px-space-md h-14 bg-surface-container-low shadow-sm">
+<!-- Tab 1: Trang chủ -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-1 hover:bg-surface-container-high active:scale-95 transition-transform duration-150 rounded-lg">
+<span class="material-symbols-outlined text-[22px]">home</span>
+<span class="font-label-sm text-label-sm mt-0.5">Trang chủ</span>
+</button>
+<!-- Tab 2: Học từ -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-1 hover:bg-surface-container-high active:scale-95 transition-transform duration-150 rounded-lg">
+<span class="material-symbols-outlined text-[22px]">menu_book</span>
+<span class="font-label-sm text-label-sm mt-0.5">Học từ</span>
+</button>
+<!-- Tab 3: Tiến độ (ACTIVE TAB: mapped to style_active_navigation) -->
+<button aria-current="page" class="flex flex-col items-center justify-center bg-primary-fixed text-on-primary-fixed rounded-full px-4 py-1 active:scale-95 transition-transform duration-150 shadow-sm">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">bar_chart</span>
+<span class="font-label-sm text-label-sm font-bold mt-0.5">Tiến độ</span>
+</button>
+<!-- Tab 4: Hồ sơ -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-1 hover:bg-surface-container-high active:scale-95 transition-transform duration-150 rounded-lg">
+<span class="material-symbols-outlined text-[22px]">person</span>
+<span class="font-label-sm text-label-sm mt-0.5">Hồ sơ</span>
+</button>
+</nav>
+<!-- Android Gesture Bar Simulation Indicator -->
+<div class="w-full flex justify-center pb-2 pt-1 bg-surface-container-low fixed sm:absolute bottom-0 left-0 z-50 pointer-events-none">
+<div class="w-32 h-1 bg-on-surface-variant/40 rounded-full"></div>
+</div>
+</div>
+
+
+</body></html>

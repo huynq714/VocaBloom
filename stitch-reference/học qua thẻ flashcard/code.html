@@ -1,0 +1,435 @@
+<!DOCTYPE html><html class="light" lang="vi" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>VocaBloom - Học Thẻ Từ</title>
+<!-- Google Fonts: Literata & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&amp;family=Plus Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim from Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed": "#390b00",
+            "on-surface-variant": "#5a4139",
+            "primary-fixed": "#ffdbd0",
+            "surface": "#fbf9f6",
+            "primary": "#a93200",
+            "primary-container": "#ce4613",
+            "error-container": "#ffdad6",
+            "on-background": "#1b1c1a",
+            "surface-tint": "#ad3300",
+            "on-primary-container": "#fffbff",
+            "surface-container": "#efeeeb",
+            "inverse-on-surface": "#f2f0ed",
+            "surface-dim": "#dbdad7",
+            "on-primary-fixed-variant": "#842500",
+            "tertiary": "#a83200",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#fbf9f6",
+            "tertiary-container": "#cc4918",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f5f3f0",
+            "on-secondary-container": "#606361",
+            "background": "#fbf9f6",
+            "secondary-fixed": "#e0e3e0",
+            "outline": "#8d7168",
+            "on-tertiary-fixed": "#390b00",
+            "secondary-container": "#dde0dd",
+            "inverse-surface": "#30312f",
+            "surface-variant": "#e4e2df",
+            "tertiary-fixed-dim": "#ffb59d",
+            "outline-variant": "#e2bfb5",
+            "inverse-primary": "#ffb59e",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#444845",
+            "on-secondary-fixed": "#181c1b",
+            "error": "#ba1a1a",
+            "on-tertiary-container": "#fffbff",
+            "on-tertiary-fixed-variant": "#842500",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#ffdbd0",
+            "surface-container-highest": "#e4e2df",
+            "secondary": "#5b5f5d",
+            "secondary-fixed-dim": "#c4c7c4",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "on-surface": "#1b1c1a",
+            "surface-container-high": "#eae8e5",
+            "primary-fixed-dim": "#ffb59e"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-xl": "2rem",
+            "margin": "1rem",
+            "space-xs": "0.25rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "headline-md": ["Literata"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "display-lg": ["Literata"],
+            "headline-sm": ["Literata"],
+            "headline-lg": ["Literata"],
+            "label-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Touch ripple & smooth flip transitions */
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+    .flashcard-inner {
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+    .flashcard-inner.flipped {
+      transform: rotateY(180deg);
+    }
+    .backface-hidden {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .card-rotate-back {
+      transform: rotateY(180deg);
+    }
+    
+    /* Subtle paper texture aesthetic */
+    .paper-card {
+      box-shadow: 0px 4px 16px rgba(30, 35, 32, 0.05), 0px 1px 3px rgba(30, 35, 32, 0.03);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex justify-center items-stretch selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Mobile Viewport Frame calibrated for Google Pixel 4a (393px width constraint) -->
+<div class="w-full max-w-[420px] min-h-screen flex flex-col justify-between relative bg-surface overflow-x-hidden border-x border-surface-container-high/40 shadow-xl">
+<!-- Top Navigation Header Container -->
+<header class="w-full bg-surface sticky top-0 z-30 pt-safe">
+<!-- Android 34 Status Bar Spacer & Padding -->
+<div class="h-2 w-full"></div>
+<!-- Top Bar: Shared Components Blueprint & Strict Intent Execution -->
+<div class="flex justify-between items-center w-full px-space-md h-14">
+<!-- Leading Back Action (Min 48x48dp interactive bounding box) -->
+<button aria-label="Quay lại" class="w-12 h-12 flex items-center justify-center -ml-2 rounded-full text-on-surface hover:bg-surface-container-high active:scale-95 transition-transform duration-150 focus:outline-none" onclick="window.history.back()" type="button">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<!-- Center Deck Metadata & Progress Count -->
+<div class="flex flex-col items-center flex-1 mx-2 text-center pointer-events-none">
+<h1 class="font-headline-sm text-headline-sm text-on-surface line-clamp-1 font-semibold tracking-tight">Chủ đề: Daily Life</h1>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">12/30 từ</span>
+</div>
+</div>
+<!-- Trailing Actions: TTS Quick Audio & Favorite Bookmark -->
+<div class="flex items-center gap-1 -mr-2">
+<button aria-label="Phát âm" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[22px]">volume_up</span>
+</button>
+<button aria-label="Lưu yêu thích" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high active:scale-95 transition-transform duration-150" id="star-btn" onclick="toggleStar()" type="button">
+<span class="material-symbols-outlined text-[22px] transition-colors duration-200" id="star-icon">star</span>
+</button>
+</div>
+</div>
+<!-- Linear Micro Progress Track -->
+<div class="w-full px-space-md pt-1 pb-2">
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary rounded-full transition-all duration-300" style="width: 40%;"></div>
+</div>
+</div>
+</header>
+<!-- Main Flashcard Workspace -->
+<main class="flex-1 flex flex-col items-center justify-center px-space-md py-space-sm perspective-1000">
+<!-- Interactive Flip Card Container -->
+<div class="flashcard-inner relative w-full h-[470px] cursor-pointer" id="card-element" onclick="flipCard()">
+<!-- CARD FRONT: Detailed Core Editorial Lexicon Presentation -->
+<div class="backface-hidden absolute inset-0 w-full h-full bg-surface-container-lowest rounded-2xl border border-surface-variant/80 paper-card p-6 flex flex-col justify-between select-none">
+<!-- Top Row: POS Badge & Memory Hint Prompt -->
+<div class="flex items-center justify-between">
+<!-- Part of Speech Pill -->
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-low border border-surface-variant text-on-surface-variant font-label-md text-label-md tracking-wider">
+              Tính từ • Adjective
+            </span>
+<!-- Tap Hint Pill -->
+<div class="flex items-center gap-1 text-on-surface-variant/70 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+<span class="">Chạm để lật</span>
+</div>
+</div>
+<!-- Middle Block: Headword, Phonetics & Accent Buttons -->
+<div class="flex flex-col items-center text-center my-auto">
+<!-- Term Typography (Literata Editorial Styling) -->
+<h2 class="font-display-lg text-display-lg font-bold text-on-surface tracking-tight mb-2">
+              Resilient
+            </h2>
+<!-- IPA Transcription & Pronunciation Triggers -->
+<div class="flex items-center justify-center gap-2 mb-4">
+<span class="font-body-md text-body-md text-primary font-medium tracking-wide">
+                /rɪˈzɪl.jənt/
+              </span>
+</div>
+<!-- Accents Audio Badges (UK & US) -->
+<div class="flex items-center gap-2 mb-5">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container border border-surface-variant text-on-surface flex items-center gap-1.5 font-label-sm text-label-sm active:scale-95 transition-all" onclick="event.stopPropagation(); playAudio('UK')" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">volume_up</span>
+<span class="">UK</span>
+</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container border border-surface-variant text-on-surface flex items-center gap-1.5 font-label-sm text-label-sm active:scale-95 transition-all" onclick="event.stopPropagation(); playAudio('US')" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">volume_up</span>
+<span class="">US</span>
+</button>
+</div>
+<!-- Primary Vietnamese Definition -->
+<div class="w-full bg-surface-container-low/60 rounded-xl p-3.5 border border-surface-container mb-3 text-left">
+<p class="font-body-lg text-body-lg text-on-surface font-semibold leading-snug">
+                Kiên cường, có khả năng phục hồi nhanh
+              </p>
+</div>
+<!-- Contextual Exemplar Sentence -->
+<div class="w-full text-left space-y-1 bg-surface-bright p-3 rounded-lg border-l-2 border-primary">
+<p class="font-body-md text-body-md text-on-surface italic">
+                “Communities need to become more resilient to climate change.”
+              </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Các cộng đồng cần trở nên kiên cường hơn trước biến đổi khí hậu.
+              </p>
+</div>
+</div>
+<!-- Bottom Row: Synonyms & Flip indicator -->
+<div class="pt-3 border-t border-surface-variant/50 flex items-center justify-between">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Đồng nghĩa:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm font-medium">tough</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-body-sm text-body-sm font-medium">robust</span>
+</div>
+<div class="w-8 h-8 rounded-full flex items-center justify-center bg-primary-fixed/50 text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</div>
+</div>
+</div>
+<!-- CARD BACK: Etymology, Mnemonic & Nuance (Revealed upon Flip) -->
+<div class="backface-hidden absolute inset-0 w-full h-full bg-surface-container-lowest rounded-2xl border border-surface-variant/80 paper-card p-6 flex flex-col justify-between select-none">
+<!-- Top Row of Card Back -->
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-label-md">
+<span class="material-symbols-outlined text-[15px] mr-1">lightbulb</span> Mẹo ghi nhớ &amp; Ngữ cảnh
+            </span>
+<div class="flex items-center gap-1 text-on-surface-variant/70 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+<span class="">Lật lại từ</span>
+</div>
+</div>
+<!-- Middle Content: Roots & Collocations -->
+<div class="my-auto space-y-4">
+<!-- Root Word Breakdown -->
+<div class="bg-surface-container-low rounded-xl p-4 border border-surface-variant">
+<div class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider mb-1">
+                Gốc từ Latinh (Etymology)
+              </div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                Xuất phát từ từ <em>resilire</em> (bật ngược lại, dội lại). Tưởng tượng như một lò xo có thể bật trở lại hình dạng ban đầu sau khi bị nén mạnh.
+              </p>
+</div>
+<!-- Common Collocations Bento Grid -->
+<div>
+<div class="font-label-md text-label-md text-on-surface-variant font-bold mb-2">
+                Cụm từ thường gặp (Collocations)
+              </div>
+<div class="grid grid-cols-2 gap-2">
+<div class="p-2.5 rounded-lg bg-surface-bright border border-surface-container">
+<div class="font-label-md text-label-md text-on-surface font-semibold">Resilient economy</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Nền kinh tế vững vàng</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-bright border border-surface-container">
+<div class="font-label-md text-label-md text-on-surface font-semibold">Highly resilient</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Rất kiên cường</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Back Footnote -->
+<div class="pt-3 border-t border-surface-variant/50 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="">Chủ đề: Climate &amp; Ecology</span>
+<span class="text-primary font-semibold">Cấp độ CEFR: B2</span>
+</div>
+</div>
+</div>
+<!-- Quick Action / Card Hint Anchor -->
+<div class="w-full flex justify-center mt-3">
+<button class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors font-label-md text-label-md" onclick="flipCard()" type="button">
+<span class="material-symbols-outlined text-[18px]">rotate_right</span>
+<span class="">Lật để xem giải nghĩa &amp; ngữ nguyên</span>
+</button>
+</div>
+</main>
+<!-- Bottom Ergonomic Touch Action Dock (Android Single-Thumb Reach Zone) -->
+<!-- The BottomNavBar shell is suppressed as instructed: this is a focused task-learning screen -->
+<footer class="w-full bg-surface-container-low border-t border-surface-variant/40 px-space-md pt-3 pb-8 shadow-[0_-4px_16px_rgba(0,0,0,0.03)] z-20">
+<!-- Ergonomic Prompt Label -->
+<div class="text-center mb-2.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">
+          Mức độ ghi nhớ của bạn
+        </span>
+</div>
+<!-- 3 Thumb-Friendly Recall Action Buttons (Min height 52dp > 48dp Android Touch Target) -->
+<div class="grid grid-cols-3 gap-2.5">
+<!-- Button 1: Chưa nhớ (Needs review / Red-Charcoal tone) -->
+<button class="min-h-[54px] px-2 py-2 flex flex-col items-center justify-center rounded-xl bg-surface-container-lowest border border-error/30 text-error hover:bg-error-container/40 active:scale-95 transition-all duration-150 shadow-sm group" onclick="handleAnswer(1)" type="button">
+<div class="flex items-center gap-1 mb-0.5">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span class="font-label-lg text-label-lg font-bold">Chưa nhớ</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lặp lại ngay</span>
+</button>
+<!-- Button 2: Phân vân (Hesitant / Warm Amber-Sand tone) -->
+<button class="min-h-[54px] px-2 py-2 flex flex-col items-center justify-center rounded-xl bg-surface-container-lowest border border-outline-variant text-on-surface hover:bg-surface-container-high active:scale-95 transition-all duration-150 shadow-sm group" onclick="handleAnswer(2)" type="button">
+<div class="flex items-center gap-1 mb-0.5">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+<span class="font-label-lg text-label-lg font-bold">Phân vân</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ôn sau 1 ngày</span>
+</button>
+<!-- Button 3: Đã thuộc (Mastered / Signature Burnt Orange Accent) -->
+<button class="min-h-[54px] px-2 py-2 flex flex-col items-center justify-center rounded-xl bg-primary text-on-primary hover:bg-primary-container active:scale-95 transition-all duration-150 shadow-md" onclick="handleAnswer(3)" type="button">
+<div class="flex items-center gap-1 mb-0.5">
+<span class="material-symbols-outlined text-[18px] text-on-primary">check_circle</span>
+<span class="font-label-lg text-label-lg font-bold text-on-primary">Đã thuộc</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed">Ôn sau 4 ngày</span>
+</button>
+</div>
+<!-- Android 34 Gesture Navigation Indicator Spacer -->
+<div class="h-4 w-full flex justify-center items-end pt-3">
+<div class="w-32 h-1 bg-on-surface-variant/20 rounded-full"></div>
+</div>
+</footer>
+<!-- Interactive Feedback Toast (Hidden by default) -->
+<div class="fixed bottom-28 left-1/2 -translate-x-1/2 pointer-events-none opacity-0 transition-opacity duration-200 z-50" id="feedback-toast">
+<div class="px-4 py-2 bg-inverse-surface text-inverse-on-surface rounded-full shadow-lg font-label-md text-label-md flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed" id="toast-icon">check</span>
+<span id="toast-text" class="">Đã ghi nhận tiến độ</span>
+</div>
+</div>
+</div>
+<!-- Inline Micro-Interactions Script -->
+<script>
+    let isFlipped = false;
+    let isStarred = false;
+
+    function flipCard() {
+      const card = document.getElementById('card-element');
+      isFlipped = !isFlipped;
+      if (isFlipped) {
+        card.classList.add('flipped');
+      } else {
+        card.classList.remove('flipped');
+      }
+    }
+
+    function toggleStar() {
+      const starIcon = document.getElementById('star-icon');
+      isStarred = !isStarred;
+      if (isStarred) {
+        starIcon.textContent = 'star';
+        starIcon.style.fontVariationSettings = "'FILL' 1";
+        starIcon.classList.add('text-primary');
+        showToast('Đã lưu vào danh sách từ vựng ưu tiên', 'star');
+      } else {
+        starIcon.textContent = 'star';
+        starIcon.style.fontVariationSettings = "'FILL' 0";
+        starIcon.classList.remove('text-primary');
+        showToast('Đã bỏ lưu khỏi danh sách ưu tiên', 'bookmark_remove');
+      }
+    }
+
+    function playAudio(accent) {
+      showToast(`Đang phát âm giọng ${accent}...`, 'volume_up');
+    }
+
+    function handleAnswer(level) {
+      const messages = {
+        1: { text: 'Cần ôn lại - Thẻ sẽ xuất hiện lại cuối phiên', icon: 'replay' },
+        2: { text: 'Ghi nhận phân vân - Lên lịch ôn lại ngày mai', icon: 'schedule' },
+        3: { text: 'Tuyệt vời! Đã thuộc từ vựng', icon: 'celebration' }
+      };
+
+      const { text, icon } = messages[level];
+      showToast(text, icon);
+
+      // Reset card flip state if flipped
+      if (isFlipped) {
+        setTimeout(() => flipCard(), 300);
+      }
+    }
+
+    function showToast(message, iconName = 'check') {
+      const toast = document.getElementById('feedback-toast');
+      const toastText = document.getElementById('toast-text');
+      const toastIcon = document.getElementById('toast-icon');
+
+      toastText.textContent = message;
+      toastIcon.textContent = iconName;
+
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+
+      clearTimeout(window.toastTimer);
+      window.toastTimer = setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 2000);
+    }
+  </script>
+
+
+</body></html>

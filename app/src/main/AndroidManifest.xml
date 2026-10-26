@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"><uses-permission android:name="android.permission.INTERNET"/><uses-permission android:name="android.permission.POST_NOTIFICATIONS"/><uses-permission android:name="android.permission.VIBRATE"/>
+ <application android:allowBackup="false" android:label="VocaBloom" android:theme="@style/Theme.VocaBloom" android:supportsRtl="true">
+ <activity android:name=".ui.AuthActivity" android:exported="true"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity>
+ <activity android:name=".ui.SessionResultActivity" android:exported="false"/>
+ <activity android:name=".ui.ProfileActivity" android:exported="false"/>
+ <activity android:name=".ui.StatisticsActivity" android:exported="false"/>
+ <activity android:name=".ui.FlashcardActivity" android:exported="false"/>
+ <activity android:name=".ui.TopicsActivity" android:exported="false"/>
+ <activity android:name=".ui.MainActivity" android:exported="false"/>
+ <receiver android:name=".data.StudyReminderReceiver" android:exported="false"/>
+ </application>
+</manifest>

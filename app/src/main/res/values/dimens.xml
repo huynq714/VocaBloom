@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="nav_icon_gap">2dp</dimen>
+    <dimen name="nav_hpad">8dp</dimen>
+</resources>

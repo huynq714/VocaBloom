@@ -1,0 +1,299 @@
+<!DOCTYPE html><html class="light" lang="vi" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport">
+<title>VocaBloom - Bảng điều khiển học tập</title>
+<!-- Material Symbols & Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Verbatim Tailwind Config -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed": "#390b00",
+            "on-surface-variant": "#5a4139",
+            "primary-fixed": "#ffdbd0",
+            "surface": "#fbf9f6",
+            "primary": "#a93200",
+            "primary-container": "#ce4613",
+            "error-container": "#ffdad6",
+            "on-background": "#1b1c1a",
+            "surface-tint": "#ad3300",
+            "on-primary-container": "#fffbff",
+            "surface-container": "#efeeeb",
+            "inverse-on-surface": "#f2f0ed",
+            "surface-dim": "#dbdad7",
+            "on-primary-fixed-variant": "#842500",
+            "tertiary": "#a83200",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#fbf9f6",
+            "tertiary-container": "#cc4918",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f5f3f0",
+            "on-secondary-container": "#606361",
+            "background": "#fbf9f6",
+            "secondary-fixed": "#e0e3e0",
+            "outline": "#8d7168",
+            "on-tertiary-fixed": "#390b00",
+            "secondary-container": "#dde0dd",
+            "inverse-surface": "#30312f",
+            "surface-variant": "#e4e2df",
+            "tertiary-fixed-dim": "#ffb59d",
+            "outline-variant": "#e2bfb5",
+            "inverse-primary": "#ffb59e",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#444845",
+            "on-secondary-fixed": "#181c1b",
+            "error": "#ba1a1a",
+            "on-tertiary-container": "#fffbff",
+            "on-tertiary-fixed-variant": "#842500",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#ffdbd0",
+            "surface-container-highest": "#e4e2df",
+            "secondary": "#5b5f5d",
+            "secondary-fixed-dim": "#c4c7c4",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "on-surface": "#1b1c1a",
+            "surface-container-high": "#eae8e5",
+            "primary-fixed-dim": "#ffb59e"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-xl": "2rem",
+            "margin": "1rem",
+            "space-xs": "0.25rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "headline-md": ["Literata"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "display-lg": ["Literata"],
+            "headline-sm": ["Literata"],
+            "headline-lg": ["Literata"],
+            "label-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    body {
+      background-color: #fbf9f6;
+      color: #1b1c1a;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col justify-between selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Main Viewport Container (Optimized for Android Pixel 4a: 393px width, full centered mobile layout) -->
+<div class="w-full max-w-[420px] mx-auto min-h-screen bg-background flex flex-col relative shadow-sm pb-24">
+<!-- 1. Top Bar / App Header -->
+<header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-md px-space-md pt-3 pb-2 flex items-center justify-between transition-colors">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary font-headline-sm text-headline-sm">
+          M
+        </div>
+<div>
+<span class="block text-label-sm font-label-sm text-on-surface-variant">Thứ Tư, 24 Tháng 5</span>
+<h1 class="text-headline-sm font-headline-sm text-on-surface tracking-tight leading-none">
+            Chào buổi sáng, Minh Anh!
+          </h1>
+</div>
+</div>
+<!-- Actions: Streak Pill & Notification -->
+<div class="flex items-center gap-1.5">
+<!-- Streak Badge -->
+<div class="flex items-center gap-1 bg-primary-fixed text-on-primary-fixed px-2.5 py-1 rounded-full text-label-md font-label-md shadow-xs active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="local_fire_department" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="">14 ngày</span>
+</div>
+<!-- Notification Button (48x48dp interactive container) -->
+<button aria-label="Thông báo" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high active:scale-95 transition-transform duration-150 relative" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary"></span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-space-md pt-2 space-y-space-md">
+<!-- 2. Thẻ tiến độ hôm nay (Daily Goal Bento Card) -->
+<section class="bg-surface-container-lowest rounded-xl p-5 border border-surface-variant shadow-sm relative overflow-hidden">
+<!-- Subtle background watermark ornament -->
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-primary-fixed/20 pointer-events-none blur-xl"></div>
+<div class="flex items-start justify-between relative z-10 mb-3">
+<div>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm uppercase tracking-wider text-primary font-bold">
+<span class="material-symbols-outlined text-[14px]" data-icon="flag">flag</span>
+              Mục tiêu hôm nay
+            </span>
+<div class="flex items-baseline gap-1.5 mt-1">
+<span class="text-headline-lg font-headline-lg text-on-surface">18</span>
+<span class="text-body-md font-body-md text-on-surface-variant">/ 25 từ mới</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-low text-primary text-label-md font-label-md font-bold border border-surface-variant">
+            72%
+          </span>
+</div>
+<!-- Linear Progress Bar -->
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden mb-4 relative z-10">
+<div class="bg-primary h-full rounded-full transition-all duration-500 ease-out" style="width: 72%;"></div>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4 relative z-10">
+          Chỉ còn 7 từ nữa để hoàn thành mục tiêu ngày và giữ vững chuỗi hoa nở rực rỡ!
+        </p>
+<!-- Big 52dp Primary Action Button -->
+<button class="w-full h-[52px] bg-primary-container text-on-primary-container rounded-xl flex items-center justify-center gap-2 text-label-lg font-label-lg shadow-sm hover:bg-primary active:scale-[0.98] transition-all duration-150 relative z-10" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span class="">Tiếp tục học ngay</span>
+</button>
+</section>
+<!-- 3. Mục Spaced Repetition SRS (Ôn tập khẩn cấp) -->
+
+<!-- 4. Lộ trình học đề xuất (Current Deck & Next Lesson) -->
+<section class="space-y-2">
+<div class="flex items-center justify-between">
+<h2 class="text-headline-sm font-headline-sm text-on-surface">Lộ trình đang học</h2>
+<a class="text-label-md font-label-md text-primary flex items-center gap-0.5 hover:underline" href="#">
+<span class="">Đổi bộ thẻ</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- Deck Card (Editorial tactile card) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 border border-surface-variant shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-primary border border-surface-variant">
+<span class="material-symbols-outlined text-[24px]" data-icon="menu_book">menu_book</span>
+</div>
+<div>
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-wider">CHỦ ĐỀ: DAILY LIFE</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface text-[17px] leading-tight">Daily Life (Đời sống thường ngày)</h3>
+</div>
+</div>
+</div>
+<!-- Progress track -->
+<div class="space-y-1.5 mb-3.5">
+<div class="flex justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span class="">Tiến độ bộ thẻ</span>
+<span class="font-bold text-on-surface">36% (18 / 50 từ)</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 36%;"></div>
+</div>
+</div>
+<!-- Next Lesson Module Indicator -->
+<div class="bg-surface-container-low rounded-lg p-3 border border-surface-variant/80 flex items-center justify-between">
+<div class="flex items-center gap-2.5 overflow-hidden">
+<span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0" data-icon="bookmark">bookmark</span>
+<div class="truncate">
+<span class="block text-label-sm font-label-sm text-on-surface-variant">Bài học kế tiếp</span>
+<span class="text-body-md font-body-md text-on-surface font-medium truncate block">Thói quen buổi sáng &amp; Sinh hoạt cá nhân</span>
+</div>
+</div>
+<button aria-label="Bắt đầu bài học kế tiếp" class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center flex-shrink-0 active:scale-90 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 5. Thống kê nhanh (Quick Stats Bento) -->
+
+<!-- Từ của ngày (Bonus Micro Inspiration - Editorial Touch) -->
+<section class="bg-surface-container-lowest rounded-xl p-4 border border-surface-variant">
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-sm font-label-sm text-primary uppercase font-bold tracking-wider">Từ vựng mỗi ngày</span>
+<button aria-label="Phát âm từ" class="w-8 h-8 rounded-full flex items-center justify-center text-primary hover:bg-primary-fixed/30 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="volume_up">volume_up</span>
+</button>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-headline-md font-headline-md text-on-surface">Resilience</span>
+<span class="text-body-sm font-body-sm text-primary italic font-serif">/rɪˈzɪl.jəns/</span>
+<span class="text-label-sm font-label-sm px-1.5 py-0.5 bg-surface-container rounded text-secondary">danh từ</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1.5">
+          Khả năng phục hồi, kiên cường vượt qua nghịch cảnh.
+        </p>
+</section>
+</main>
+<!-- 6. Bottom Navigation Bar (Constructed directly using Shared Components JSON specifications) -->
+<!-- Active State: "Trang chủ" (Exact intent match) gets style_active_navigation. Others get style_inactive_navigation -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-space-md h-14 pb-safe bg-surface-container-low border-t border-surface-variant shadow-sm max-w-[420px] mx-auto right-0">
+<!-- Tab 1: Trang chủ (ACTIVE) -->
+<button class="flex flex-col items-center justify-center bg-primary-fixed text-on-primary-fixed rounded-full px-3 py-1 active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-sm font-label-sm">Trang chủ</span>
+</button>
+<!-- Tab 2: Học từ -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-1 hover:bg-surface-container-high active:scale-95 transition-transform duration-150 rounded-lg" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="menu_book">menu_book</span>
+<span class="text-label-sm font-label-sm">Học từ</span>
+</button>
+<!-- Tab 3: Luyện tập -->
+
+<!-- Tab 4: Tiến độ -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-1 hover:bg-surface-container-high active:scale-95 transition-transform duration-150 rounded-lg" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="bar_chart">bar_chart</span>
+<span class="text-label-sm font-label-sm">Tiến độ</span>
+</button>
+<!-- Tab 5: Hồ sơ -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-1 hover:bg-surface-container-high active:scale-95 transition-transform duration-150 rounded-lg" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="person">person</span>
+<span class="text-label-sm font-label-sm">Hồ sơ</span>
+</button>
+</nav>
+</div>
+<script>
+    // Audio trigger micro-interaction mock
+    document.querySelectorAll('[data-icon="volume_up"]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.currentTarget.classList.add('scale-125');
+        setTimeout(() => {
+          e.currentTarget.classList.remove('scale-125');
+        }, 180);
+      });
+    });
+  </script>
+
+
+</body></html>

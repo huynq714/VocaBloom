@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/paper">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="@color/surface">
+        <TextView android:id="@+id/topicsBack" android:layout_width="48dp" android:layout_height="48dp" android:gravity="center" android:text="‹" android:textSize="32sp" android:textColor="@color/ink" android:clickable="true" android:focusable="true" />
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:text="VocaBloom" android:textColor="@color/accent" android:textSize="23sp" android:textStyle="bold" android:fontFamily="@font/literata_semibold" />
+        <TextView android:id="@+id/topicsStreak" android:layout_width="58dp" android:layout_height="40dp" android:gravity="center" android:text="🔥 0" android:textColor="@color/accent" android:textSize="13sp" android:background="@drawable/stitch_soft" />
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="20dp" android:paddingBottom="24dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Học từ" android:textColor="@color/ink" android:textSize="28sp" android:textStyle="bold" android:fontFamily="@font/literata_semibold" />
+                <TextView android:id="@+id/topicCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3 chủ đề demo" android:textColor="@color/muted" android:textSize="12sp" />
+            </LinearLayout>
+            <EditText android:id="@+id/topicSearch" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="12dp" android:paddingStart="16dp" android:paddingEnd="14dp" android:hint="⌕  Tìm kiếm chủ đề, từ vựng..." android:singleLine="true" android:textSize="14sp" android:textColor="@color/ink" android:background="@drawable/stitch_input" />
+            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:scrollbars="none">
+                <LinearLayout android:id="@+id/filterContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" />
+            </HorizontalScrollView>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginTop="22dp" android:layout_marginBottom="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="ĐANG HỌC GẦN ĐÂY" android:textColor="@color/accent" android:textSize="12sp" android:textStyle="bold" />
+                <TextView android:id="@+id/topicGoalLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="8dp" android:paddingEnd="8dp" android:paddingTop="4dp" android:paddingBottom="4dp" android:text="Mục tiêu ngày: 10 từ" android:textColor="@color/muted" android:textSize="10sp" android:background="@drawable/stitch_soft" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/topicList" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="center" android:padding="16dp" android:layout_marginTop="16dp" android:background="@drawable/stitch_soft">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="“Một ngôn ngữ mới là một cuộc đời mới.”" android:textColor="@color/ink" android:textSize="14sp" android:fontFamily="@font/literata_semibold" android:textStyle="italic" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:layout_marginTop="5dp" android:text="— Danh ngôn Ba Tư" android:textColor="@color/muted" android:textSize="11sp" android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/include_nav" />
+</LinearLayout>

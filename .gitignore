@@ -1,0 +1,32 @@
+# Android Studio / Gradle
+*.iml
+.gradle/
+.idea/
+local.properties
+/build/
+/app/build/
+
+# Firebase configuration and credentials (keep local)
+/app/google-services.json
+**/service-account*.json
+**/credentials*.json
+.firebase/
+firebase-debug.log
+
+# Signing keys and environment secrets
+*.jks
+*.keystore
+*.pem
+*.p12
+*.env
+.env
+.env.*
+!.env.example
+
+# Generated packages and local tooling
+*.apk
+*.aab
+*.hprof
+captures/
+firebase-seed/node_modules/
+.firebaserc

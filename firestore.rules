@@ -1,0 +1,37 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedInAs(uid) {
+      return request.auth != null && request.auth.uid == uid;
+    }
+
+    match /users/{uid} {
+      allow read: if signedInAs(uid);
+      allow create, update: if signedInAs(uid) && request.resource.data.userId == uid;
+      allow delete: if false;
+
+      match /favorites/{wordId} {
+        allow read, delete: if signedInAs(uid);
+        allow create, update: if signedInAs(uid)
+          && request.resource.data.wordId == wordId;
+      }
+    }
+
+    match /userProgress/{progressId} {
+      allow get: if request.auth != null && (resource == null || resource.data.userId == request.auth.uid);
+      allow list: if request.auth != null && resource.data.userId == request.auth.uid;
+      allow create, update: if request.auth != null
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.wordId is string;
+      allow delete: if false;
+    }
+
+    match /reviewLogs/{logId} {
+      allow read: if request.auth != null && resource.data.userId == request.auth.uid;
+      allow create, update: if request.auth != null
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.wordId is string;
+      allow delete: if false;
+    }
+  }
+}

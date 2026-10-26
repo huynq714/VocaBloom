@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/paper">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center_vertical" android:orientation="horizontal"
+        android:paddingStart="16dp" android:paddingEnd="12dp" android:paddingTop="12dp" android:paddingBottom="8dp">
+        <TextView android:id="@+id/profileShortcut" android:layout_width="40dp" android:layout_height="40dp"
+            android:gravity="center" android:text="M" android:textColor="@color/accent" android:textSize="18sp"
+            android:background="@drawable/stitch_pill" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:layout_marginStart="8dp" android:orientation="vertical">
+            <TextView android:id="@+id/homeDate" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Thứ Tư, 24 Tháng 5" android:textColor="@color/muted" android:textSize="10sp" android:textStyle="bold" />
+            <TextView android:id="@+id/homeGreeting" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Chào buổi sáng!" android:textColor="@color/ink" android:textSize="18sp" android:textStyle="bold"
+                android:fontFamily="@font/literata_semibold" android:maxLines="2" android:includeFontPadding="false" />
+        </LinearLayout>
+        <TextView android:id="@+id/streakBadge" android:layout_width="76dp" android:layout_height="40dp"
+            android:gravity="center" android:text="🔥 14\nngày" android:textColor="@color/accent" android:textSize="12sp"
+            android:textStyle="bold" android:background="@drawable/stitch_pill" />
+        <TextView android:id="@+id/notificationButton" android:layout_width="40dp" android:layout_height="40dp"
+            android:gravity="center" android:drawableTop="@drawable/ic_notification"
+            android:contentDescription="Thông báo" android:clickable="true" android:focusable="true" />
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:clipToPadding="false" android:fillViewport="false">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="8dp" android:paddingBottom="24dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+                android:padding="20dp" android:background="@drawable/stitch_card" android:elevation="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:text="⚑  MỤC TIÊU HÔM NAY" android:textColor="@color/accent" android:textSize="12sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/dailyPercent" android:layout_width="54dp" android:layout_height="32dp"
+                        android:gravity="center" android:text="0%" android:textColor="@color/accent" android:textSize="14sp" android:textStyle="bold"
+                        android:background="@drawable/stitch_soft" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginTop="4dp">
+                    <TextView android:id="@+id/dailyLearned" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textColor="@color/ink" android:textSize="30sp" android:textStyle="bold" android:fontFamily="@font/literata_semibold" />
+                    <TextView android:id="@+id/dailyCount" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp" android:text="/ 10 từ mới" android:textColor="@color/muted" android:textSize="15sp" />
+                </LinearLayout>
+                <ProgressBar android:id="@+id/dailyProgress" style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent" android:layout_height="10dp" android:layout_marginTop="12dp"
+                    android:progressTint="@color/accent" android:progressBackgroundTint="@color/divider" />
+                <TextView android:id="@+id/dailySubtitle" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp" android:text="Học đều mỗi ngày để ghi nhớ lâu hơn."
+                    android:textColor="@color/muted" android:textSize="14sp" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/topicsButton" style="@style/PrimaryButton"
+                    android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="18dp"
+                    android:text="▶  Tiếp tục học ngay" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+                android:gravity="center_vertical" android:layout_marginTop="20dp" android:layout_marginBottom="8dp">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    style="@style/SectionTitle" android:fontFamily="@font/literata_semibold" android:text="Lộ trình đang học" />
+                <TextView android:id="@+id/changeDeck" android:layout_width="wrap_content" android:layout_height="48dp"
+                    android:gravity="center" android:text="Đổi bộ thẻ  ›" android:textColor="@color/accent" android:textSize="13sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+                android:padding="16dp" android:background="@drawable/stitch_card" android:elevation="1dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                    <TextView android:layout_width="44dp" android:layout_height="44dp" android:gravity="center" android:text="▤"
+                        android:textColor="@color/accent" android:textSize="27sp" android:background="@drawable/stitch_soft" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="CHỦ ĐỀ: DAILY LIFE"
+                            android:textColor="@color/muted" android:textSize="10sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/deckTitle" android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Daily Life (Đời sống thường ngày)" android:textColor="@color/ink" android:textSize="17sp"
+                            android:textStyle="bold" android:fontFamily="@font/literata_semibold" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical"
+                    android:layout_marginTop="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Tiến độ bộ thẻ"
+                        android:textColor="@color/muted" android:textSize="11sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/deckProgressText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0% (0 / 10 từ)" android:textColor="@color/ink" android:textSize="11sp" android:textStyle="bold" />
+                </LinearLayout>
+                <ProgressBar android:id="@+id/deckProgress" style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent" android:layout_height="8dp" android:layout_marginTop="7dp"
+                    android:progressTint="@color/accent" android:progressBackgroundTint="@color/divider" />
+                <LinearLayout android:id="@+id/nextLesson" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical" android:orientation="horizontal" android:padding="12dp" android:layout_marginTop="14dp"
+                    android:background="@drawable/stitch_soft" android:clickable="true" android:focusable="true">
+                    <TextView android:layout_width="28dp" android:layout_height="40dp" android:gravity="center" android:text="♧" android:textColor="@color/accent" android:textSize="21sp" />
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="8dp">
+                        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Bài học kế tiếp" android:textColor="@color/muted" android:textSize="11sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/nextLessonTitle" android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Thói quen buổi sáng &amp; Sinh hoạt cá nhân" android:textColor="@color/ink" android:textSize="15sp" android:maxLines="1" android:ellipsize="end" />
+                    </LinearLayout>
+                    <TextView android:layout_width="34dp" android:layout_height="34dp" android:gravity="center" android:text="→"
+                        android:textColor="@color/accent" android:textSize="20sp" android:background="@drawable/stitch_pill" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"
+                android:padding="16dp" android:layout_marginTop="18dp" android:background="@drawable/stitch_card">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="TỪ VỰNG MỖI NGÀY"
+                        android:textColor="@color/accent" android:textSize="11sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/dailyWordAudio" android:layout_width="40dp" android:layout_height="40dp" android:gravity="center"
+                        android:drawableTop="@drawable/ic_volume" android:contentDescription="Phát âm từ" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:layout_marginTop="4dp">
+                    <TextView android:id="@+id/dailyWord" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Resilience"
+                        android:textColor="@color/ink" android:textSize="25sp" android:textStyle="bold" android:fontFamily="@font/literata_semibold" />
+                    <TextView android:id="@+id/dailyWordPhonetic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                        android:text="/rɪˈzɪl.jəns/" android:textColor="@color/accent" android:textSize="12sp" android:textStyle="italic" />
+                    <TextView android:id="@+id/dailyWordPart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                        android:paddingStart="6dp" android:paddingEnd="6dp" android:paddingTop="3dp" android:paddingBottom="3dp"
+                        android:text="danh từ" android:textColor="@color/muted" android:textSize="10sp" android:background="@drawable/stitch_soft" />
+                </LinearLayout>
+                <TextView android:id="@+id/dailyWordMeaning" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp" android:text="Khả năng phục hồi, kiên cường vượt qua nghịch cảnh."
+                    android:textColor="@color/muted" android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/include_nav" />
+</LinearLayout>

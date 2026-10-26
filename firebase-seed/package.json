@@ -1,0 +1,1 @@
+{"name":"vocabloom-firebase-seed","private":true,"scripts":{"seed":"node seed.js"},"dependencies":{"firebase-admin":"^13.0.0"}}
